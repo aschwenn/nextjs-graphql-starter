@@ -1,10 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import tw from 'twin.macro'
-import { Variant } from '../../types'
 
 interface Props {
-  variant: Variant
+  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'code' | 'body' | 'subtitle'
   italic?: boolean
   /** available weights depending on the chosen font family */
   weight: 'thin' | 'extralight' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black'
@@ -84,7 +83,7 @@ const Code = styled.code<{ italic?: boolean, weight: string }>`
   ${tw`text-sm`}
 `
 
-export default ({
+const Typography = ({
   variant,
   italic,
   weight,
@@ -106,3 +105,5 @@ export default ({
     default: return <Body italic={italic} weight={weight} className={className}>{children}</Body>
   }
 }
+
+export default Typography

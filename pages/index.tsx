@@ -1,8 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import React from 'react'
+import { Layout } from '../components/layout'
 
-export default () => (
-  <div>
-    test
-  </div>
+const Home = (): React.ReactElement => (
+  <Layout title="Home">
+    Test
+  </Layout>
 )
+
+export default Home

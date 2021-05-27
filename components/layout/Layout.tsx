@@ -12,7 +12,7 @@ const Container = styled.div`
   max-width: 1024px;
 `
 
-export default ({
+const Layout = ({
   title,
   children
 }: Props): React.ReactElement => (
@@ -27,3 +27,5 @@ export default ({
     </div>
   </>
 )
+
+export default Layout
